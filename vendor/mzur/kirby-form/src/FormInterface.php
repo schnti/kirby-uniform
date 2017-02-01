@@ -10,7 +10,7 @@ interface FormInterface
      * @param  array  $data
      * @return void
      */
-    public function __construct($data = []);
+    public function __construct($session_key, $data = []);
 
     /**
      * Get or set form data

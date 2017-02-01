@@ -76,9 +76,9 @@ class Form extends BaseForm
      * @param  array  $rules  Form fields and their validation rules
      * @return void
      */
-    function __construct($rules = [])
+    function __construct($session_key = '_flash', $rules = [])
     {
-        parent::__construct($rules);
+        parent::__construct($session_key, $rules);
         static::loadTranslation();
         $this->shouldValidate = true;
         $this->shouldCallGuard = true;

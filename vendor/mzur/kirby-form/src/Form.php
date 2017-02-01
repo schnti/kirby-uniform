@@ -69,10 +69,10 @@ class Form implements FormInterface
      * @param  array  $data
      * @return void
      */
-    public function __construct($data = [])
+    public function __construct($session_key = '_flash', $data = [])
     {
         // Instantiate the Flash instance
-        $this->flash = Flash::getInstance();
+        $this->flash = Flash::getInstance($session_key);
 
         // Register the fields
         foreach ($data as $field => $options) {

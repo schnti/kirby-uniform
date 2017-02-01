@@ -32,11 +32,11 @@ class Flash
      *
      * @return Jevets\Kirby\Flash
      */
-    public static function getInstance()
+    public static function getInstance($session_key = '_flash')
     {
         if (null === static::$instance)
         {
-            static::$instance = new static();
+            static::$instance = new static($session_key);
         }
 
         return static::$instance;
